@@ -11,8 +11,11 @@ Tomar una API gratuita y crear, por lo menos, 3 pantallas.
 - Una pagina de detalle, que se entraría al hacer clic en una de las tarjetas de la pagina principal.
 
 Pista: Si usan hooks, van a querer buscar el hook useEffect.
+
 Para comenzar usen este comando
-```npx create-react-app nombre-de-tu-app```  
+
+```npx create-react-app nombre-de-tu-app```
+
 Pueden usar cualquier API, pero acá les dejo un par para que revisen.
 
 ### Rick y morty
