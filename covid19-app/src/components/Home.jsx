@@ -29,6 +29,7 @@ border-style: none;
 `
 const ButtonSearcher = styled.button `
 margin:0 5px;
+cursor:pointer;
 background: #c80000;
 border: none;
 color: white;
@@ -39,6 +40,10 @@ font-weight:600;
 
 export default function Home ({ coronaApi, news, info, newsInfo}) {
    
+  React.useEffect( ()=>{
+    
+         document.title = "Coronadatas - find out about coronavirus's growth"
+  },[])
    const [search,setSearch] = useState({})
   
    function inputChange(e) {

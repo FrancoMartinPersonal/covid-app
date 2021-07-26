@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 const MainDivInfo = styled.div `
@@ -50,12 +50,19 @@ margin:5px;
 
 
 export default function Countrydata ({country, info}) {
-   
+    React.useEffect( ()=>{
+       info.map((e)=>{
+        if(country == e.id){
+            document.title = "coronadata - "+ e.country
+        }} )},[])
+        // React.useEffect( ()=>{
+        //   document.title = "Coronadatas - find out about coronavirus's growth  "
+        //      },[])
     // console.log(infoMap)
     //   console.log(info.map(e => e.id))
     //   console.log(country)
     //   console.log( "↑↑↑ info countrydata ↑↑↑")
-return (
+    return (
     <MainDivInfo>
     {info.map(c => {
              if(country == c.id){
@@ -67,7 +74,7 @@ return (
              <PerInfo>
              <H5Card>CONFIRMED</H5Card> 
              
-             <H5Card style={{ color: '#b69f82' }}>{c.confirmed.toLocaleString()}</H5Card>
+             <H5Card style={{ color: '#c50a0a' }}>{c.confirmed.toLocaleString()}</H5Card>
              </PerInfo>
              <PerInfo>
              <H5Card >RECOVERED</H5Card> 

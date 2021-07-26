@@ -52,7 +52,8 @@ function News () {
             life_expectancy:recurso.All.life_expectancy,
             updated: recurso.All.updated ,
             location : recurso.All.location,
-            continent: recurso.All.continent
+            continent: recurso.All.continent,
+            iso: recurso.All.iso
             }
         
             setInfo (oldContries =>[...oldContries,{...countries,id}])
@@ -100,9 +101,11 @@ function News () {
  }/>
 
 
-<Route path="/countrylist">
-  <Countrylist coronaApiCountries={coronaApiCountries} list={list}/>
-</Route>
+<Route path="/countrylist" render ={({match}) => 
+ <Countrylist props= {match} coronaApiCountries={coronaApiCountries} list={list} coronaApi={coronaApi} info={info}/>
+} />
+ 
+
     </>
   );
 }

@@ -63,12 +63,13 @@ export default function  Contact() {
 
   function onInputChange(evento) {
     evento.preventDefault()
+    console.log(errors)
+    console.log(input)
     
     setInput ( (prevState) => {
     
       return {...prevState,
-      
-      [evento.target.name]: evento.target.value
+[evento.target.name]: evento.target.value
     }})
 
     setError(validate({
