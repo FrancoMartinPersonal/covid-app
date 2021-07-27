@@ -2,10 +2,7 @@
   "homepage": "http://gitname.github.io/",
   "name": "covid19-app",
   "version": "0.1.0",
-  "engines": {
-    "node": "14.x",
-     "npm":"7.x"
-  },
+
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
